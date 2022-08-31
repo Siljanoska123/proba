@@ -16,10 +16,14 @@ import { Certificates } from "./components/Certificates";
 // });
 
 export function App() {
+  
+  
   const [landingPageData, setLandingPageData] = useState({});
   useEffect(() => {
     setLandingPageData(JsonData);
   }, []);
+
+ 
 
   return (
     <div>
@@ -28,8 +32,7 @@ export function App() {
       <Routes >
         <Route path="/" element={<HomePage />} />
         <Route path="/awards" element={<Awards data={landingPageData.Awards} />} />
-        <Route path="/certificates" element={<Certificates data={landingPageData.Certificates} />} />
-      
+
       </Routes>
       
       <Footer data={landingPageData.Footer} />

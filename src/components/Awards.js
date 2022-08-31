@@ -9,12 +9,23 @@ import '../css-components/certificates.css'
 import JsonData from '../data/data.json'
 
 export const Awards = (props) => {
+ 
+
+
+  
   const [landingPageData, setLandingPageData] = useState({});
   useEffect(() => {
     setLandingPageData(JsonData);
   }, []);
 
 
+
+
+
+
+
+
+  
   return (
 
     <div id="awards" className='text-center'>
@@ -34,10 +45,7 @@ export const Awards = (props) => {
               </button>
               <div className='row'>
 
-                <div className='portfolio-items'>
-
-                  <PopUp data={landingPageData.Awards} />
-                </div>
+      <PopUp data={landingPageData.Awards}/>
               </div>
               {/* <div class="card__subtitle">more </div> */}
               <p class="card__description">
